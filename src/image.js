@@ -6,8 +6,8 @@ let image;
 function showImage(imageNumber) {
   image = new Image();
   image.src = `images/${imageNumber + 1}.jpg`;
-  image.classList.add("bgImage");
   body.prepend(image);
+  image.classList.add("bgImage");
 }
 
 function generateRandomNumber() {
