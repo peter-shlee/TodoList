@@ -2,7 +2,7 @@ const KEY_OF_LOCAL_STORAGE_TASK_LIST = "pending_list";
 
 const todoForm = document.querySelector(".toDoForm");
 const toDoInput = todoForm.querySelector("input");
-const htmlPendingList = document.querySelector(".pendingList");
+const htmlPendingList = document.querySelector(".tasksList");
 const htmlFinishedList = document.querySelector(".finishedList");
 let taskList;
 
@@ -43,7 +43,7 @@ function onSubmit(event) {
 
 function createDeleteButton(task) {
   const deleteButton = document.createElement("button");
-  deleteButton.innerText = "❌";
+  deleteButton.innerText = "✖️";
   deleteButton.addEventListener("click", function(event) {
     const index = taskList.indexOf(task);
     taskList.splice(index, 1);
@@ -65,10 +65,10 @@ function createFinishedButton(task) {
   finishedButton.addEventListener("click", function(event) {
     const this_li = event.target.parentNode;
     if (task.isFinished) {
-      finishedButton.innerText = "⬜";
+      finishedButton.innerText = "⚪";
       htmlPendingList.appendChild(this_li);
     } else {
-      finishedButton.innerText = "✅";
+      finishedButton.innerText = "⭕";
       htmlFinishedList.appendChild(this_li);
     }
     task.isFinished = !task.isFinished;
@@ -93,10 +93,10 @@ function addTaskToHtml(task) {
   li.appendChild(finishedButton);
 
   if (task.isFinished) {
-    finishedButton.innerText = "✅";
+    finishedButton.innerText = "⭕";
     htmlFinishedList.appendChild(li);
   } else {
-    finishedButton.innerText = "⬜";
+    finishedButton.innerText = "⚪";
     htmlPendingList.appendChild(li);
   }
 }

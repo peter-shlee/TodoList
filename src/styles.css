@@ -1,5 +1,70 @@
 body {
   font-family: sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 20vh;
+  background-color: #2f3640;
+}
+
+.clock {
+  font-size: 8rem;
+}
+
+.greetingText {
+  font-size: 2rem;
+}
+
+.weather {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  font-size: 1.3rem;
+}
+
+.task {
+  font-size: 1.5rem;
+}
+
+.tasksList {
+  margin-bottom: 2rem;
+}
+
+.tasksList,
+.finishedList {
+  font-size: 1.3rem;
+}
+
+.finishedList {
+  text-decoration: line-through;
+}
+
+ul {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  margin-left: 5px;
+  margin-right: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+input {
+  color: whitesmoke;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: white;
+  font-size: 2rem;
+  height: 2rem;
+  width: 20%;
+}
+
+input::placeholder {
+  color: whitesmoke;
 }
 
 .greetingForm,

@@ -2,7 +2,7 @@ const greetingForm = document.querySelector(".greetingForm");
 const nameInput = greetingForm.querySelector(".nameInput");
 const greetingText = document.querySelector(".greetingText");
 const task = document.querySelector(".task");
-const taskForm = task.querySelector(".taskForm");
+const taskForm = task.querySelector(".toDoForm");
 const weather = document.querySelector(".weather");
 
 const SHOWING_CN = "showing";

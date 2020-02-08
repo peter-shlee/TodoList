@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 
-const IMAGE_COUNT = 3;
+const IMAGE_COUNT = 9;
 
 function showImage(imageNumber) {
   const image = new Image();
