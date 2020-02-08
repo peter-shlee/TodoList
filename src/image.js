@@ -5,12 +5,12 @@ let image;
 
 function showImage(imageNumber) {
   image = new Image();
-  image.src = `images/${imageNumber + 1}.jpg`;
   image.addEventListener("loadend", onLoadEnd);
+  image.src = `images/${imageNumber + 1}.jpg`;
+  body.prepend(image);
 }
 
 function onLoadEnd() {
-  body.prepend(image);
   image.classList.add("bgImage");
 }
 
